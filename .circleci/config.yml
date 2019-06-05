@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: Validate base
-          command: packer build ./base/base.json
+          command: packer validate ./base/base.json
       - run:
           name: Validate snowflake
           command: packer build ./snowflake/snowflake.json
