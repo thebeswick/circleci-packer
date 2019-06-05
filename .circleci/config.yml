@@ -7,9 +7,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Validate base
-          command: packer validate ./base/base.json
-      - run:
           name: Validate snowflake
           command: packer validate ./snowflake/snowflake.json
   build-snowflake:
