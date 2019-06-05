@@ -8,10 +8,10 @@ jobs:
       - checkout
       - run:
           name: Validate base
-          command: packer validate ./base/base.json
+          command: packer build ./base/base.json
       - run:
           name: Validate snowflake
-          command: packer validate ./snowflake/snowflake.json
+          command: packer build ./snowflake/snowflake.json
   build-base:
     docker:
       - image: hashicorp/packer:1.1.1
